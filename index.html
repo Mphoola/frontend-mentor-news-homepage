@@ -16,23 +16,41 @@
   </head>
   <body class="mx-2 md:mx-16 lg:mx-24 my-8">
     <!-- navigation -->
-    <nav class="flex justify-between">
-      <a href="">
-        <img
-          class="w-8 h-8"
-          src="./src/images/logo.svg"
-          alt="logo"
-        />
-      </a>
-      <div class="hidden md:flex space-x-10">
-        <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Home</a>
-        <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">New</a>
-        <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Popular</a>
-        <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Trending</a>
-        <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Categories</a>
+    <nav class=" relative">
+      <div class="flex justify-between">
+        <a href="">
+          <img
+            class="w-8 h-8"
+            src="./src/images/logo.svg"
+            alt="logo"
+          />
+        </a>
+        <div class="hidden md:flex space-x-10">
+          <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Home</a>
+          <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">New</a>
+          <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Popular</a>
+          <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Trending</a>
+          <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Categories</a>
+        </div>
+
+        <img src="./src/images/icon-menu.svg" alt="" class="md:hidden h-6 w-8 cursor-pointer" id="menu">
+
       </div>
 
-      <img src="./src/images/icon-menu.svg" alt="" class="md:hidden h-6 w-8">
+      <!-- mobile menu -->
+      <div class="hidden absolute -top-8 right-0  bg-white pt-8 pl-6 h-[100vh] w-[65vw]" id="mobile-menu">
+        <div class="flex justify-end">
+          <img src="./src/images/icon-menu-close.svg" alt="" class="h-6 w-6 cursor-pointer" id="menu-close">
+        </div>
+        <div class="flex flex-col space-y-4 pt-16">
+          <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Home</a>
+          <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">New</a>
+          <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Popular</a>
+          <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Trending</a>
+          <a href="" class="text-sm hover:text-[#E9AE57] transition text-gray-400">Categories</a>
+        </div>
+      </div>
+
     </nav>
 
     <!-- main content -->
@@ -111,5 +129,22 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a target="_blank" class="text-blue-400 underline" href="https://promise.hackbits.tech/">Promise Mphoola</a>.
     </div>
+
+    <script>
+      const menu = document.getElementById('menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const closeMenu = document.getElementById('menu-close');
+      const body = document.querySelector('body');
+
+      menu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        body.classList.toggle('bg-black/20');
+      });
+
+      closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        body.classList.toggle('bg-black/20');
+      });
+    </script>
   </body>
 </html>
