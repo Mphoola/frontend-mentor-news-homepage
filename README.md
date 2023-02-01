@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/Mphoola/frontend-mentor-news-homepage](hhttps://github.com/Mphoola/frontend-mentor-news-homepage)
+- Solution URL: [https://github.com/Mphoola/frontend-mentor-news-homepage](https://github.com/Mphoola/frontend-mentor-news-homepage)
 - Live Site URL: [https://mphoola-news-homepage.netlify.app/](https://mphoola-news-homepage.netlify.app/)
 
 
